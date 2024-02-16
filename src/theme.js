@@ -124,7 +124,7 @@ export const themeSettings = (mode) =>{
     return{
         palette:{
             mode:mode,
-            ...colors(mode==="dark"
+            ...(mode==="dark"
             ?{
                 primary:{
                     main :colors.primary[500],
@@ -135,7 +135,7 @@ export const themeSettings = (mode) =>{
                 neutral:{
                     dark: colors.grey[700],
                     main:colors.grey[500],
-                    light:colors.gray[200],
+                    light:colors.grey[200],
                 },
                 background: {
                     default: colors.primary[500],
@@ -150,7 +150,7 @@ export const themeSettings = (mode) =>{
                 neutral:{
                     dark: colors.grey[700],
                     main:colors.grey[500],
-                    light:colors.gray[200],
+                    light:colors.grey[200],
                 },
                 background: {
                     default: "#FFFBE9",
@@ -193,22 +193,20 @@ export const ColorModeContext = createContext({
     toggleColorMode : () =>{}
 })
 
-export function useMode() {
-    const [mode, setMode] = useState("dark")
-
-    const colorMode = useMemo(() =>({
-        toggleColorMode: () => setMode((prev) => (prev === "light" ? "dark" : "light")),
-    }) , []);
-
-    const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
-    return(
-        <div>
-            {theme}
-            {colorMode}
-        </div>
-    )
-}
-
+export const useMode = () => {
+    const [mode, setMode] = useState("dark");
+  
+    const colorMode = useMemo(
+      () => ({
+        toggleColorMode: () =>
+          setMode((prev) => (prev === "light" ? "dark" : "light")),
+      }),
+      []
+    );
+  
+    const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
+    return [theme, colorMode];
+  };
 
 
 
