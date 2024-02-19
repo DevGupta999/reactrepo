@@ -12,7 +12,7 @@ function Form() {
   };
 
   return (
-    <Box m="20px">
+    <Box m="20px" width='95%' >
       <Header title="CREATE USER" subtitle="Create a New User Profile" />
 
       <Formik

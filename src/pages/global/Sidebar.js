@@ -16,6 +16,8 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import "./med.css"
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -41,8 +43,9 @@ const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
 
+ 
   return (
-    <Box
+    <Box 
       sx={{
         "& .pro-sidebar-inner": {
           background: `${colors.primary[400]} !important`,
@@ -53,16 +56,16 @@ const Sidebar = () => {
         "& .pro-inner-item": {
           padding: "5px 35px 5px 20px !important",
         },
-        "& .pro-inner-item:hover": {
-          color: "#868dfb !important",
-        },
+        // "& .pro-inner-item:hover": {
+        //   color: "#868dfb !important",
+        // },
         "& .pro-menu-item.active": {
           color: "#6870fa !important",
-        },
+        }
       }}
     >
-      <ProSidebar collapsed={isCollapsed}>
-        <Menu iconShape="square">
+      <ProSidebar className="qw" style={{minHeight: "100vh"}} collapsed={isCollapsed}>
+        <Menu iconShape="square" >
           {/* LOGO AND MENU ICON */}
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
@@ -107,10 +110,10 @@ const Sidebar = () => {
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  Ed Roh
+                  Helen Salmon
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  VP Fancy Admin
+                  Founder
                 </Typography>
               </Box>
             </Box>
@@ -182,7 +185,7 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             />
-
+{/* 
             <Typography
               variant="h6"
               color={colors.grey[300]}
@@ -217,7 +220,7 @@ const Sidebar = () => {
               icon={<MapOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
           </Box>
         </Menu>
       </ProSidebar>

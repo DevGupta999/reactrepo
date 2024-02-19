@@ -5,6 +5,8 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
+import useMediaQuery from '@mui/material/useMediaQuery';
+import "./cal.css"
 import {
   Box,
   List,
@@ -16,7 +18,9 @@ import {
 import Header from "../../components/Header";
 import { tokens } from "../../theme";
 
+
 function Calendar () {
+  
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [currentEvents, setCurrentEvents] = useState([]);
@@ -48,10 +52,10 @@ function Calendar () {
   };
 
   return (
-    <Box m="20px">
+    <Box className="aa" m="20px" width='90%'>
       <Header title="Calendar" subtitle="Full Calendar Interactive Page" />
 
-      <Box display="flex" justifyContent="space-between">
+      <Box  className="container" display="flex" justifyContent="space-between">
         {/* CALENDAR SIDEBAR */}
         <Box
           flex="1 1 10%"
@@ -88,14 +92,14 @@ function Calendar () {
         </Box>
 
         {/* CALENDAR */}
-        <Box flex="1 1 40%" ml="15px">
+        <Box className="fro" flex="1 1 40%" ml="15px" mr="10px">
           <FullCalendar
-            height="75vh"
+            height="100vh"
             plugins={[
               dayGridPlugin,
               timeGridPlugin,
               interactionPlugin,
-              listPlugin,
+             // listPlugin,
             ]}
             headerToolbar={{
               left: "prev,next today",

@@ -15,6 +15,7 @@ import FAQ from "./pages/faq";
 // import Pie from "./pages/pie";
 // import Geography from "./pages/geography"
 import Calendar from "./pages/calendar"
+import Layout from './Layout';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -23,21 +24,24 @@ function App() {
       <ThemeProvider theme ={theme}>
         <CssBaseline/>
         <div className="app" >
-          <Sidebars/>
+          {/* <Sidebars/> */}
           <main className='content'>
-            <Topbar/>
+            {/* <Topbar/>  */}
             <Routes>
-              <Route path="/" element={<Dashboards/>} />
-              <Route path="/team" element={<Team/>}/>
-              <Route path="/contacts" element={<Contacts />} />
-              <Route path="/invoices" element={<Invoices/>}/>
-              <Route path="/form" element={<Form/>}/>
-               {/*<Route path="/bar" element={<Bar/>}/>
-              <Route path="/pie" element={<Pie/>}/>
-              <Route path="/line" element={<Line/>}/>*/}
-              <Route path="/faq" element={<FAQ/>}/>
-              {/* <Route path="/geography" element={<Geography/>}/> */}
-              <Route path="/calendar" element={<Calendar />} />
+             <Route path='/' element={<Layout></Layout>}> 
+                <Route path="/" element={<Dashboards/>} />
+                <Route path="/team" element={<Team/>}/>
+                <Route path="/contacts" element={<Contacts />} />
+                <Route path="/invoices" element={<Invoices/>}/>
+                <Route path="/form" element={<Form/>}/>
+                {/*<Route path="/bar" element={<Bar/>}/>
+                <Route path="/pie" element={<Pie/>}/>
+                <Route path="/line" element={<Line/>}/>*/}
+                <Route path="/faq" element={<FAQ/>}/>
+                {/* <Route path="/geography" element={<Geography/>}/> */}
+                <Route path="/calendar" element={<Calendar />} />
+               </Route> 
+              
             </Routes>
           </main>
         </div>

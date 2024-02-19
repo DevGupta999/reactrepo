@@ -69,11 +69,12 @@ function Team () {
   ];
 
   return (
-    <Box m="20px">
+    <Box m="20px" width='90%' position="relative">
       <Header title="TEAM" subtitle="Managing the Team Members" />
       <Box
         m="40px 0 0 0"
         height="75vh"
+        align="center"
         sx={{
           "& .MuiDataGrid-root": {
             border: "none",
