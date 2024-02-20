@@ -94,7 +94,7 @@ function Calendar () {
         {/* CALENDAR */}
         <Box className="fro" flex="1 1 40%" ml="15px" mr="10px">
           <FullCalendar
-            height="100vh"
+            height="95vh"
             plugins={[
               dayGridPlugin,
               timeGridPlugin,

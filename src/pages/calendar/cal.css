@@ -2,3 +2,12 @@
     display: flex;
     flex-direction: column;
 }
+@media(max-width:600px){
+    .aa{
+        font-size: 9px;
+    }
+
+    .fro{
+        font-size: 11px;
+    }
+}

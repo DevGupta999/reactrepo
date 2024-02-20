@@ -12,7 +12,7 @@ function Form() {
   };
 
   return (
-    <Box m="20px" width='95%' >
+    <Box m="20px" width='95%' paddingRight="2px">
       <Header title="CREATE USER" subtitle="Create a New User Profile" />
 
       <Formik
@@ -116,7 +116,7 @@ function Form() {
                 sx={{ gridColumn: "span 4" }}
               />
             </Box>
-            <Box display="flex" justifyContent="end" mt="20px">
+            <Box className="pp" display="flex" justifyContent="end" mt="20px">
               <Button type="submit" color="secondary" variant="contained">
                 Create New User
               </Button>

@@ -64,7 +64,7 @@ const Sidebar = () => {
         }
       }}
     >
-      <ProSidebar className="qw" style={{minHeight: "100vh"}} collapsed={isCollapsed}>
+      <ProSidebar style={{minHeight: "100vh"}} collapsed={isCollapsed}>
         <Menu iconShape="square" >
           {/* LOGO AND MENU ICON */}
           <MenuItem

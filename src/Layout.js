@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./pages/global/Sidebar";
 import Topbar from "./pages/global/Topbar";
+import "./index.css"
 
 export default function Layout(){
 
     return (   
-        <div style={{
+        <div className="tact" style={{
             display: "flex",
         }}>
                 <Sidebar/>
