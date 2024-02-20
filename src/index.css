@@ -13,8 +13,7 @@ body,
 .app {
   display: flex;
   position: relative;
-  box-sizing: border-box;
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 ::-webkit-scrollbar{
@@ -24,11 +23,21 @@ body,
 ::-webkit-scrollbar-track{
   background-color: gray;
 }
+.outlet{
+  width: 100vw !important;
+}
 
 
-@media screen and (max-width:400px){
-  .tact{
-      max-width: 85%;
-
+ @media screen and (max-width:400px){
+  .outlet{
+    max-width: 80vw !important;
   }
-} 
+}  
+
+@media screen and (max-width:1300px){
+  .outlet{
+    max-width: 85vw !important;
+  }
+}  
+
+

@@ -418,7 +418,7 @@ export const mockLineData = [
         y: 101,
       },
       {
-        x: "helicopter",
+        x: "heli",
         y: 75,
       },
       {
@@ -430,7 +430,7 @@ export const mockLineData = [
         y: 216,
       },
       {
-        x: "subway",
+        x: "sub",
         y: 35,
       },
       {
@@ -440,26 +440,6 @@ export const mockLineData = [
       {
         x: "car",
         y: 88,
-      },
-      {
-        x: "moto",
-        y: 232,
-      },
-      {
-        x: "bicycle",
-        y: 281,
-      },
-      {
-        x: "horse",
-        y: 1,
-      },
-      {
-        x: "skateboard",
-        y: 35,
-      },
-      {
-        x: "others",
-        y: 14,
       },
     ],
   },
@@ -472,7 +452,7 @@ export const mockLineData = [
         y: 212,
       },
       {
-        x: "helicopter",
+        x: "heli",
         y: 190,
       },
       {
@@ -484,7 +464,7 @@ export const mockLineData = [
         y: 9,
       },
       {
-        x: "subway",
+        x: "sub",
         y: 75,
       },
       {
@@ -494,26 +474,6 @@ export const mockLineData = [
       {
         x: "car",
         y: 33,
-      },
-      {
-        x: "moto",
-        y: 189,
-      },
-      {
-        x: "bicycle",
-        y: 97,
-      },
-      {
-        x: "horse",
-        y: 87,
-      },
-      {
-        x: "skateboard",
-        y: 299,
-      },
-      {
-        x: "others",
-        y: 251,
       },
     ],
   },
@@ -526,7 +486,7 @@ export const mockLineData = [
         y: 191,
       },
       {
-        x: "helicopter",
+        x: "heli",
         y: 136,
       },
       {
@@ -538,7 +498,7 @@ export const mockLineData = [
         y: 190,
       },
       {
-        x: "subway",
+        x: "sub",
         y: 211,
       },
       {
@@ -548,26 +508,6 @@ export const mockLineData = [
       {
         x: "car",
         y: 189,
-      },
-      {
-        x: "moto",
-        y: 152,
-      },
-      {
-        x: "bicycle",
-        y: 8,
-      },
-      {
-        x: "horse",
-        y: 197,
-      },
-      {
-        x: "skateboard",
-        y: 107,
-      },
-      {
-        x: "others",
-        y: 170,
       },
     ],
   },

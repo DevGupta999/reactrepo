@@ -1,0 +1,7 @@
+@media(max-width:600px){
+    .we{
+        width : 100% !important;
+        column-width: 10% !important;
+    }
+
+}

@@ -142,18 +142,18 @@ export const themeSettings = (mode) =>{
                 },
             }:{
                 primary:{
-                    main :colors.primary[900],
+                    main :colors.primary[700],
                 },
                 secondary:{
                     main: colors.greenAccent[100],
                 },
                 neutral:{
-                    dark: colors.grey[700],
-                    main:colors.grey[500],
+                    dark: colors.grey[900],
+                    main:colors.grey[900],
                     light:colors.grey[900],
                 },
                 background: {
-                    default: "#A0AECD",
+                    default: "#D3E3F1",
                 },
             })
         },

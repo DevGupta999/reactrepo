@@ -6,17 +6,15 @@ import "./index.css"
 export default function Layout(){
 
     return (   
-        <div className="tact" style={{
-            display: "flex",
-        }}>
-                <Sidebar/>
-                <div style={{width: "100%"}}>
-                <Topbar/>
-                <div style={{width: "100%"}}>
+        <>
+            <div style={{'display':'flex'}}>
+            <Sidebar/>
+            <div className="outlet" style={{'display':'flex','flexDirection':'column'}}>
+                <Topbar className='topbar'/>
                 <Outlet />
-                </div>
-                
-                </div>
-        </div>
+            </div>
+            </div>  
+            
+        </>
     );
 }

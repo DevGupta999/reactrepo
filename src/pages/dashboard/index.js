@@ -12,19 +12,20 @@ import GeographyChart from "../../components/GeographyChart";
 import BarChart from "../../components/BarChart";
 import StatBox from "../../components/StatBox";
 import ProgressCircle from "../../components/ProgressCircle";
+import "./dash.css"
 
 const Dashboards = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box m="20px" width='95%'>
+    <Box className ="hd" m="20px" width='95%'>
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
+        <Header className='wdw' title="DASHBOARD" subtitle="Welcome to your dashboard" />
 
         <Box>
-          <Button
+          <Button className='wdw'
             sx={{
               backgroundColor: colors.blueAccent[700],
               color: colors.grey[100],
@@ -40,14 +41,14 @@ const Dashboards = () => {
       </Box>
 
       {/* GRID & CHARTS */}
-      <Box
+      <Box className="container"
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
         gridAutoRows="140px"
         gap="20px"
       >
         {/* ROW 1 */}
-        <Box
+        <Box  className="maain"
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
@@ -66,7 +67,7 @@ const Dashboards = () => {
             }
           />
         </Box>
-        <Box
+        <Box className="maain"
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
@@ -85,7 +86,7 @@ const Dashboards = () => {
             }
           />
         </Box>
-        <Box
+        <Box className="maain"
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
@@ -104,7 +105,7 @@ const Dashboards = () => {
             }
           />
         </Box>
-        <Box
+        <Box className="maain"
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
@@ -125,27 +126,27 @@ const Dashboards = () => {
         </Box>
 
         {/* ROW 2 */}
-        <Box
+        <Box className="maain"
           gridColumn="span 8"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
         >
-          <Box
+          <Box 
             mt="25px"
-            p="0 30px"
+            p="0 10px"
             display="flex "
             justifyContent="space-between"
             alignItems="center"
           >
             <Box>
-              <Typography
+              <Typography className="revenue"
                 variant="h5"
                 fontWeight="600"
                 color={colors.grey[100]}
               >
                 Revenue Generated
               </Typography>
-              <Typography
+              <Typography className="revenue"
                 variant="h3"
                 fontWeight="bold"
                 color={colors.greenAccent[500]}
@@ -156,7 +157,7 @@ const Dashboards = () => {
             <Box>
               <IconButton>
                 <DownloadOutlinedIcon
-                  sx={{ fontSize: "26px", color: colors.greenAccent[500] }}
+                  sx={{ fontSize: "20px", color: colors.greenAccent[500] }}
                 />
               </IconButton>
             </Box>
@@ -165,7 +166,7 @@ const Dashboards = () => {
             <LineChart isDashboard={true} />
           </Box>
         </Box>
-        <Box
+        <Box className="maain"
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}

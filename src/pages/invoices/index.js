@@ -8,27 +8,27 @@ const Invoices = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
-    { field: "id", headerName: "ID" },
+    { field: "id", headerName: "ID" , width: 60},
     {
       field: "name",
       headerName: "Name",
-      flex: 1,
+      width:300,
       cellClassName: "name-column--cell",
     },
     {
       field: "phone",
       headerName: "Phone Number",
-      flex: 1,
+      width:300,
     },
     {
       field: "email",
       headerName: "Email",
-      flex: 1,
+      width:300,
     },
     {
       field: "cost",
       headerName: "Cost",
-      flex: 1,
+      width:300,
       renderCell: (params) => (
         <Typography color={colors.greenAccent[500]}>
           ${params.row.cost}
@@ -38,7 +38,7 @@ const Invoices = () => {
     {
       field: "date",
       headerName: "Date",
-      flex: 1,
+      width:300,
     },
   ];
 
@@ -74,7 +74,7 @@ const Invoices = () => {
           },
         }}
       >
-        <DataGrid checkboxSelection rows={mockDataInvoices} columns={columns} />
+        <DataGrid sx={{ fontSize :{xs:"15px", sm:"20px", md:"20px"} }} checkboxSelection rows={mockDataInvoices} columns={columns} />
       </Box>
     </Box>
   );

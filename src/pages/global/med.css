@@ -1,6 +1,12 @@
 @media(max-width:600px){
-    .qw{
-        min-height: fit-content;
-        background-color: red;
+    /* .ss{
+        position: relative !important;
+        z-index: 100000000 !important;
+        max-width: 100vw !important;
+    } */
+    .ss{
+        /* background-color: aliceblue !important; */
+        /* max-height:40px ; */
     }
+
 }

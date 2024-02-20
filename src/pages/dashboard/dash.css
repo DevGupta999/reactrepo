@@ -1,0 +1,48 @@
+@media screen and (max-width:1200px){
+  .wdw{
+   font-size: 20px!important;
+   padding: 8px !important;
+   /* margin: 20px !important */
+  }
+  .hd{
+   padding-right: 20px !important;
+  }
+
+  .revenue{
+   font-size: 30px !important;
+  }
+
+  .maain{
+   /* grid-gap:10px !important; */
+    grid-column: span 12 !important;
+  }
+  .container{
+   grid-gap:10px !important;
+  }
+  }
+
+
+
+@media screen and (max-width:700px){
+   .wdw{
+    font-size: 10px!important;
+    padding: 4px !important;
+    /* margin: 20px !important */
+   }
+   .hd{
+    padding-right: 10px !important;
+   }
+
+   .revenue{
+    font-size: 15px !important;
+   }
+
+   .maain{
+    /* grid-gap:10px !important; */
+     grid-column: span 12 !important;
+   }
+   .container{
+    grid-gap:10px !important;
+   }
+   }
+ 

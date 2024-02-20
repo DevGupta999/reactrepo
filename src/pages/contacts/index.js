@@ -11,40 +11,36 @@ function Contacts () {
   const colors = tokens(theme.palette.mode);
 
   const columns = [
-    { field: "id", headerName: "ID", flex: 0.5 },
+    { field: "id", headerName: "ID",width:60 },
     {
       field: "name",
       headerName: "Name",
-      flex: 1,
+      width:300,
       cellClassName: "name-column--cell",
     },
     {
       field: "age",
       headerName: "Age",
-      type: "number",
+      width:300,
       headerAlign: "left",
       align: "left",
     },
     {
       field: "phone",
       headerName: "Phone Number",
-      flex: 1,
+      width:300,
     },
     {
       field: "email",
       headerName: "Email",
-      flex: 1,
+      width:300,
     },
     {
       field: "city",
       headerName: "City",
-      flex: 1,
+      width:300,
     },
-    {
-      field: "zipCode",
-      headerName: "Zip Code",
-      flex: 1,
-    },
+
   ];
 
   return (
@@ -86,6 +82,7 @@ function Contacts () {
         }}
       >
         <DataGrid
+          sx={{ fontSize :{xs:"15px", sm:"20px", md:"20px"} }}
           rows={mockDataContacts}
           columns={columns}
           component={{ Toolbar: GridToolbar }}

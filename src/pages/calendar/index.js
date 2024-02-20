@@ -63,21 +63,22 @@ function Calendar () {
           p="15px"
           borderRadius="4px"
         >
-          <Typography variant="h5">Events</Typography>
+          <Typography variant="h5"  sx={{ fontSize :{xs:"15px", sm:"20px", md:"25px"} }}>Events</Typography>
           <List>
             {currentEvents.map((event) => (
               <ListItem
                 key={event.id}
                 sx={{
-                  backgroundColor: colors.greenAccent[500],
+                  backgroundColor: colors.greenAccent[600],
                   margin: "10px 0",
                   borderRadius: "2px",
+                
                 }}
               >
                 <ListItemText
                   primary={event.title}
                   secondary={
-                    <Typography>
+                    <Typography sx={{ fontSize :{xs:"15px", sm:"20px", md:"25px"} }}>
                       {formatDate(event.start, {
                         year: "numeric",
                         month: "short",
@@ -92,8 +93,9 @@ function Calendar () {
         </Box>
 
         {/* CALENDAR */}
-        <Box className="fro" flex="1 1 40%" ml="15px" mr="10px">
+        <Box sx={{ fontSize :{xs:"15px", sm:"20px", md:"25px"} }} className="fro" flex="1 1 40%" ml="15px" mr="10px">
           <FullCalendar
+          
             height="95vh"
             plugins={[
               dayGridPlugin,

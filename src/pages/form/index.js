@@ -12,7 +12,7 @@ function Form() {
   };
 
   return (
-    <Box m="20px" width='95%' paddingRight="2px">
+    <Box  m="20px" width='95%' paddingRight="2px">
       <Header title="CREATE USER" subtitle="Create a New User Profile" />
 
       <Formik
@@ -28,7 +28,7 @@ function Form() {
           handleChange,
           handleSubmit,
         }) => (
-          <form onSubmit={handleSubmit}>
+          <form  onSubmit={handleSubmit}>
             <Box
               display="grid"
               gap="30px"
@@ -117,7 +117,7 @@ function Form() {
               />
             </Box>
             <Box className="pp" display="flex" justifyContent="end" mt="20px">
-              <Button type="submit" color="secondary" variant="contained">
+              <Button sx={{ fontSize :{xs:"15px", sm:"20px", md:"25px"} }} type="submit" color="secondary" variant="contained">
                 Create New User
               </Button>
             </Box>

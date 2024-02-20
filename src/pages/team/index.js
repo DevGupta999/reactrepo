@@ -6,34 +6,37 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../components/Header";
+import "./teaz.css"
+import { ClassNames } from "@emotion/react";
 
 function Team () {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
-    { field: "id", headerName: "ID" },
+    { field: "id", headerName: "ID", width: 60},
     {
       field: "name",
       headerName: "Name",
-      flex: 1,
+      width: 300,
       cellClassName: "name-column--cell",
     },
     {
       field: "age",
       headerName: "Age",
-      type: "number",
+      width: 300,
+      // type: "number",
       headerAlign: "left",
       align: "left",
     },
     {
       field: "phone",
       headerName: "Phone Number",
-      flex: 1,
+      width: 300,
     },
     {
       field: "email",
       headerName: "Email",
-      flex: 1,
+      flex: 500,
     },
     // {
     //   field: "accessLevel",
@@ -69,9 +72,9 @@ function Team () {
   ];
 
   return (
-    <Box m="20px" width='90%' position="relative">
+    <Box  m="20px" width='85%' position="relative">
       <Header title="TEAM" subtitle="Managing the Team Members" />
-      <Box
+      <Box className="we" 
         m="40px 0 0 0"
         height="75vh"
         align="center"
@@ -101,7 +104,7 @@ function Team () {
           },
         }}
       >
-        <DataGrid checkboxSelection rows={mockDataTeam} columns={columns} />
+        <DataGrid className="we"  sx={{ fontSize :{xs:"15px", sm:"20px", md:"20px"} }} rows={mockDataTeam} columns={columns} />
       </Box>
     </Box>
   );
